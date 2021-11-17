@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<title>House Seller Form</title>
+</head>
+<body>
+<center><h2>House Seller Form</h2></center>
+<div>
+    <div class="container1">
+        <form action="submit_phpcrm_form.php" method="post">  
+			<p>Please fill out as much information as you can about your property so that we can evaluate which program might best suit your needs.</p>
+			<hr><h4>Contact Information</h4><hr>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required> 
+			<label for="phone">Mobile</label>
+            <input type="number" id="phone" name="phone" required>
+			<label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+			<label for="best_time">Best Time to Call</label>
+				<select name="best_time" id="best_time">
+                  <option value="Morning">Morning</option>
+                  <option value="Afternoon">Afternoon</option>
+                  <option value="Evening">Evening</option>
+				</select>
+			<h4>Property Information</h4>
+			<label>Address</label><br><br>
+			<label for="street1">Street Address1</label>
+            <input type="text" id="street1" name="street1" required>
+			<label for="street2">Street Address2</label>
+            <input type="text" id="street2" name="street2" >
+			<div class="row"> 
+                <div class="col-50">
+					<label for="city">City</label>
+					<input type="text" id="city" name="city" required>
+					<label for="zipcode">Zip Code</label>
+					<input type="number" id="zipcode" name="zipcode" required> 	
+					<label for="bedroom">Bedrooms:</label>
+					<select name="bedroom" id="bedroom">
+					  <option value="1">1</option>
+					  <option value="2">2</option>
+					  <option value="3">3</option>					 
+					</select>				
+					<label for="foot">Approximate Square Footage:</label>
+					<input type="text" id="foot" name="foot" required>
+					<label for="stories">How many stories?</label>
+					<input type="text" id="stories" name="stories" required>
+				</div>
+				<div class="col-50">
+					<label for="state">State</label>
+					<input type="text" id="state" name="state" required>
+					<label for="country">Country</label>
+					<select name="country" id="country" required>
+					  <option value="India">India</option>
+					  <option value="USA">USA</option>
+					  <option value="UK">UK</option>                 
+					</select>
+					<label for="bathroom">Bathrooms:</label>
+					<select name="bathroom" id="bathroom">
+					  <option value="1">1</option>
+					  <option value="2">2</option>
+					  <option value="3">3</option>					
+					</select>
+					<label for="year_built">Year Built:</label>
+					<input type="text" id="year_built" name="year_built" required>
+					<label for="garage">Garage:</label>
+					<select name="garage" id="garage">
+					  <option value="1 car">1 car</option>
+					  <option value="2 car">2 car</option>
+					  <option value="3 car">3 car</option>
+					</select>
+				</div>
+            </div> 
+			<label for="property_condition">What is the current condition of your property?</label>
+            <select name="property_condition" id="property_condition">
+				<option value="Excellent">Excellent</option>
+				<option value="Good">Good</option>
+				<option value="Poor">Poor</option>
+            </select>
+			<label for="owe_year">How many years have you owned this home:</label>
+            <input type="text" id="owe_year" name="owe_year">
+			<label for="message1">What kind of repairs and maintenance does the house need?</label>
+            <textarea id="message1" name="message1" style="height:80px"></textarea> 
+			<label for="cost">How much do you think these repairs will cost in dollars?</label>
+            <input type="text" id="cost" name="cost">
+			<label for="living_in_house">Is there anyone living in the house?</label>
+                <select name="living_in_house" id="living_in_house">
+                  <option value="Yes-Owner Occupied">Yes-Owner Occupied</option>
+                  <option value="Yes-Tenant Occupied">Yes-Tenant Occupied</option>
+                  <option value="No-Unoccupied">No-Unoccupied</option>
+                </select>
+			<label for="sale">How long has the property been for sale?</label>
+            <input type="text" id="sale" name="sale" >
+			<label>Is the house currently listed with a Realtor?</label><br>
+			<input type="radio" id=" yes" name="radio1" value="Yes" style="margin-left:13px;">&nbspYes<label for="yes"></label><br> 
+			<input type="radio" id="no" name="radio1" value="No" style="margin-left:13px;">&nbspNo<label for="no"></label><br><br>
+			<label>If No, has the house been previously listed?</label><br>
+			<input type="radio" id=" yes" name="radio2" value="Yes" style="margin-left:13px;">&nbspYes<label for="yes"></label><br>
+			<input type="radio" id="no" name="radio2" value="No" style="margin-left:13px;">&nbspNo<label for="no"></label><br><br>
+			<label for="listing_expire">If Yes, when does the listing expire?</label>
+            <input type="text" id="listing_expire" name="listing_expire" >
+			<hr><h4>Your Situation</h4><hr>
+			<label for="message2">What's your situation? Why are you selling?</label>
+            <textarea id="message2" name="message2" style="height:80px"></textarea> 
+			<hr><h4>Pricing Information</h4><hr> 
+			<label for="house_worth">What do you think your house is worth? </label>
+			<input type="text" id="house_worth" name="house_worth">
+			<label for="asking_house">How much are you asking for your house? </label>
+			<input type="text" id="asking_house" name="asking_house">     
+			<label for="determine_value"> How did you determine the value?</label>
+            <select name="determine_value" id="determine_value">
+                <option value="Appraisal">Appraisal</option>
+                <option value="Realtor">Realtor</option>
+                <option value="Tax Assesment">Tax Assesment</option>
+                <option value="Guess">Guess</option>
+			</select>
+			<label for="least">What is the least you would accept if we closed quickly?</label>
+            <input type="text" id="least" name="least" >
+			<label>Are you looking to sell your house for what you owe?</label><br>
+			<input type="radio" id=" yes" name="radio3" value="Yes" style="margin-left:13px;">&nbspYes<label for="yes"></label><br>
+			<input type="radio" id="no" name="radio3" value="No" style="margin-left:13px;">&nbspNo<label for="no"></label><br>
+			<input type="radio" id="may" name="radio3" value="May Be" style="margin-left:13px;">&nbspMay Be<label for="may"></label><br><br>
+			<label for="moving">How soon are you planning on moving?</label>
+            <input type="text" id="moving" name="moving">
+            <div class="row"> 
+                <div class="col-50">
+                  <h4>  Ist Mortgage </h4><br>
+					<label for="balance">Balance</label>
+					<input type="text" id="balance" name="balance">
+					<label for="interest_rate">Interest Rate </label>
+					<input type="text" id="interest_rate" name="interest_rate"> 
+					<label for="payment"> Payment:</label>
+					<input type="text" id="payment" name="payment">
+					<input type="radio" id="fixed" name="radio4" value="Fixed" style="margin-left:13px;">&nbspFixed<label for="fixed"></label><br>
+					<input type="radio" id="Adj" name="radio4" value="Adj" style="margin-left:13px;">&nbspAdj<label for="Adj"></label><br><br>
+				</div>
+				<div class="col-50">
+					<h4>2nd Mortgage</h4><br>
+					<label for="balance1">Balance</label>
+					<input type="text" id="balance1" name="balance1">
+					<label for="interest_rate1">Interest Rate </label>
+					<input type="text" id="interest_rate1" name="interest_rate1"> 
+					<label for="payment1"> Payment:</label>
+					<input type="text" id="payment1" name="payment1">
+					<input type="radio" id="fixed" name="radio5" value="Fixed" style="margin-left:13px;">&nbspFixed<label for="fixed"></label><br>
+					<input type="radio" id="Adj" name="radio5" value="Adj" style="margin-left:13px;">&nbspAdj<label for="Adj"></label><br><br>
+				</div>    
+            </div> 
+           <label>Payments Current?</label><br>
+				<input type="radio" id=" yes" name="radio6" value="Yes" style="margin-left:13px;">&nbspYes<label for="yes"></label><br>
+				<input type="radio" id="no" name="radio6" value="No" style="margin-left:13px;">&nbspNo<label for="no"></label><br><br>
+			<label for="dues">Do you pay Homeowner/Condo Association dues? If so, how much per year?</label>
+            <input type="text" id="dues" name="dues">
+			<label>May we take over your payments until we get the house sold?</label><br>
+			<input type="radio" id=" yes" name="radio7" value="Yes" style="margin-left:13px;">&nbspYes<label for="yes"></label><br>
+			<input type="radio" id="no" name="radio7" value="No" style="margin-left:13px;">&nbspNo<label for="no"></label><br>
+			<input type="radio" id="undecided" name="radio7" value="Undecided" style="margin-left:13px;">&nbspUndecided<label for="undecided"></label><br><br>
+			<label for="hear_us">How did you hear about us?</label>
+            <input type="text" id="hear_us" name="hear_us">
+			<label for="message1">Do you have any questions or comments you would like to share with us?</label>
+            <textarea id="message3" name="message3" style="height:80px"></textarea> 
+			<label for="cash">If we paid cash and closed by next Friday what is the lowest amount you would be willing to accept?</label>
+            <input type="text" id="cash" name="cash"> 
+			<input type="submit" value="SUBMIT" class="btn">
+		</form>
+    </div>
+</div>
+
+</body>
+</html>
